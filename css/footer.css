@@ -7,3 +7,37 @@
 .sidenav-overlay {
     z-index: 998;
 }
+
+.footer {
+    position: relative;
+    background-color: #6e6e6e; /* Główne tło */
+    text-align: center;
+    z-index: 1;
+    color: white;
+}
+
+.footer h3 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2; /* Tekst nad obrazkiem */
+}
+
+/* Obrazek pod sekcją */
+.footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/divider-bg.jpg'); /* Ścieżka do obrazka */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15; /* Możesz dostosować przezroczystość */
+    z-index: 0; /* Obrazek pod tekstem i dividerem */
+}

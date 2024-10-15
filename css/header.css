@@ -14,7 +14,7 @@
     height: 50%; /* Pokrywa połowę sekcji */
     top: 0;
     left: 0;
-    background-color: #6e6e6e; /* Kolor z przezroczystością */
+    background-color: #6e6e6ee3; /* Kolor z przezroczystością */
     z-index: 1;
 }
 
@@ -46,4 +46,49 @@
     color: #333333;
     font-size: 1.3rem;
     padding: 1rem;
+}
+
+.header-banner {
+    position: relative;
+    background-color: #ffffffc9; /* Główne tło */
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: .1rem;
+    z-index: 1;
+    color: rgb(39, 39, 39);
+}
+
+.header-banner h3 {
+    color: #2A3D45;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2; /* Tekst nad obrazkiem */
+}
+
+/* Divider */
+.header-banner-divider {
+
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2; /* Divider nad obrazkiem */
+}
+
+/* Obrazek pod sekcją */
+.header-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/divider-bg.jpg'); /* Ścieżka do obrazka */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15; /* Możesz dostosować przezroczystość */
+    z-index: 0; /* Obrazek pod tekstem i dividerem */
 }

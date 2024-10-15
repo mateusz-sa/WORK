@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 @import url('nav.css');
 @import url('header.css');
 @import url('services.css');
@@ -42,15 +43,30 @@ body {
 }
 
 
+/* Stylizacja sekcji banera */
 .section-banner {
     position: relative;
-    background-color: #6e6e6e; /* Główne tło */
-    padding: 4rem 0;
+    background-color: #6e6e6e; /* Główne tło sekcji */
+    padding: 2rem 0;
     text-align: center;
     z-index: 1;
     color: white;
 }
 
+/* Stylizacja tytułu i ikony */
+.icon-title {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Odstęp między ikoną a tekstem */
+}
+
+.section-icon {
+    font-size: 24px; /* Rozmiar ikony */
+    color: white; /* Kolor ikony */
+}
+
+/* Stylizacja tekstu sekcji */
 .section-banner h3 {
     color: white;
     font-weight: bold;
@@ -62,10 +78,10 @@ body {
     z-index: 2; /* Tekst nad obrazkiem */
 }
 
-/* Divider */
+/* Divider pod tytułem */
 .section-banner-divider {
     margin-top: 10px;
-    width: 20rem;
+    width: 22rem;
     height: 2px;
     background-color: white; /* Biała linia pod napisem */
     margin-left: auto;
@@ -88,4 +104,5 @@ body {
     opacity: 0.15; /* Możesz dostosować przezroczystość */
     z-index: 0; /* Obrazek pod tekstem i dividerem */
 }
+
 

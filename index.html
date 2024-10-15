@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Page - Nazwa Firmy</title>
     <link rel="stylesheet" href="css/main.css">
-
-</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.0/dist/fancybox.css">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.0/dist/fancybox.umd.js"></script></head>
 
 <body>
 
@@ -34,14 +34,19 @@
     
     <!-- Sekcja tytułowa -->
     <header class="header-section">
-        <div class="overlay-container"></div> <!-- Istniejący kontener -->
         <div class="container">
-           
+            <div class="header-banner">
+                <h3>PROFESJONALNE USŁUGI STOLARSKIE</h3>
+                <div class="header-banner-divider"></div>
+            </div>
         </div>
     </header>
 
     <div class="section-banner">
-        <h3>ŚWIADCZONE USŁUGI</h3>
+        <div class="icon-title">
+            <i class="fas fa-tools section-icon"></i>
+            <h3>ŚWIADCZONE USŁUGI</h3>
+        </div>
         <div class="section-banner-divider"></div>
     </div>
 
@@ -72,87 +77,114 @@
     </section>
     
     <div class="section-banner">
-        <h3>NASZE REALIZACJE</h3>
+        <div class="icon-title">
+            <i class="fas fa-box-open section-icon"></i>
+            <h3>NASZE PRODUKTY</h3>
+        </div>
         <div class="section-banner-divider"></div>
     </div>
     <!-- Sekcja z produktami -->
-    <div id="products" class="products-section section">
-        <div class="container">
-            <div class="row">
-                <!-- Pierwszy wiersz -->
-                <div class="col s12 m4">
-                    <div class="card product-card corner-top-left corner-bottom-left">
-                        <div class="card-image">
-                            <img src="img/image2.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title">Produkt 1</span>
-                            <p>Opis produktu 1...</p>
-                        </div>
+   <!-- Sekcja z produktami -->
+<!-- Sekcja z produktami -->
+<div id="products" class="products-section section">
+    <div class="container">
+        <div class="row">
+            <!-- Pierwszy wiersz produktów -->
+            <div class="col s12 m4">
+                <div class="card product-card">
+                    <div class="card-image">
+                        <a data-fancybox="gallery" href="img/image1.jpg" data-caption="Produkt 1">
+                            <img src="img/image1.jpg" alt="Produkt 1">
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Produkt 1</span>
+                        <p>Opis produktu 1...</p>
                     </div>
                 </div>
-                <div class="col s12 m4">
-                    <div class="card product-card corner-top-right corner-bottom-right">
-                        <div class="card-image">
-                            <img src="img/image1.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title">Produkt 2</span>
-                            <p>Opis produktu 2...</p>
-                        </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card product-card">
+                    <div class="card-image">
+                        <a data-fancybox="gallery" href="img/image2.jpg" data-caption="Produkt 2">
+                            <img src="img/image2.jpg" alt="Produkt 2">
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Produkt 2</span>
+                        <p>Opis produktu 2...</p>
                     </div>
                 </div>
-                <div class="col s12 m4">
-                    <div class="card product-card corner-top-right corner-bottom-right">
-                        <div class="card-image">
-                            <img src="img/image2.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title">Produkt 3</span>
-                            <p>Opis produktu 3...</p>
-                        </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card product-card">
+                    <div class="card-image">
+                        <a data-fancybox="gallery" href="img/image1.jpg" data-caption="Produkt 3">
+                            <img src="img/image1.jpg" alt="Produkt 3">
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Produkt 3</span>
+                        <p>Opis produktu 3...</p>
                     </div>
                 </div>
-                <!-- Drugi wiersz -->
-                <div class="col s12 m4">
-                    <div class="card product-card corner-top-left corner-bottom-left">
-                        <div class="card-image">
-                            <img src="img/image1.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title">Produkt 4</span>
-                            <p>Opis produktu 4...</p>
-                        </div>
+            </div>
+
+            <!-- Drugi wiersz produktów -->
+            <div class="col s12 m4">
+                <div class="card product-card">
+                    <div class="card-image">
+                        <a data-fancybox="gallery" href="img/image2.jpg" data-caption="Produkt 4">
+                            <img src="img/image2.jpg" alt="Produkt 4">
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Produkt 4</span>
+                        <p>Opis produktu 4...</p>
                     </div>
                 </div>
-                <div class="col s12 m4">
-                    <div class="card product-card corner-top-right corner-bottom-right">
-                        <div class="card-image">
-                            <img src="img/image2.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title">Produkt 5</span>
-                            <p>Opis produktu 5...</p>
-                        </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card product-card">
+                    <div class="card-image">
+                        <a data-fancybox="gallery" href="img/image1.jpg" data-caption="Produkt 5">
+                            <img src="img/image1.jpg" alt="Produkt 5">
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Produkt 5</span>
+                        <p>Opis produktu 5...</p>
                     </div>
                 </div>
-                <div class="col s12 m4">
-                    <div class="card product-card corner-top-right corner-bottom-right">
-                        <div class="card-image">
-                            <img src="img/image1.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title">Produkt 6</span>
-                            <p>Opis produktu 6...</p>
-                        </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card product-card">
+                    <div class="card-image">
+                        <a data-fancybox="gallery" href="img/image2.jpg" data-caption="Produkt 6">
+                            <img src="img/image2.jpg" alt="Produkt 6">
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Produkt 6</span>
+                        <p>Opis produktu 6...</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
     
     <div class="section-banner">
-        <h3>CENNIK</h3>
+        <div class="icon-title">
+            <i class="fas fa-tags section-icon"></i>
+            <h3>CENNIK</h3>
+        </div>
         <div class="section-banner-divider"></div>
     </div>
     <!-- Sekcja z cennikiem -->
@@ -216,40 +248,32 @@
         </div>
     </div>
     <div class="section-banner">
-        <h3>KONTAKT</h3>
+        <div class="icon-title">
+            <i class="fas fa-envelope section-icon"></i>
+            <h3>KONTAKT</h3>
+        </div>
         <div class="section-banner-divider"></div>
     </div>
     <!-- Sekcja z formularzem kontaktowym -->
-    <div id="contact" class="contact-section section">
-        <div class="container">
-            <h2 class="center-align">Skontaktuj się z nami</h2>
-            <div class="row">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <input id="name" type="text" class="validate">
-                            <label for="name">Imię</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="email" type="email" class="validate">
-                            <label for="email">Email</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <textarea id="message" class="materialize-textarea"></textarea>
-                            <label for="message">Wiadomość</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s12">
-                            <button type="submit" class="btn">Wyślij</button>                        </div>
-                    </div>
-                </form>
+    <div class="contact-section">
+        <form class="contact-form">
+            <div class="input-field">
+                <label for="name">Imię</label>
+                <input type="text" id="name" name="name">
             </div>
-        </div>
+            <div class="input-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="input-field">
+                <label for="message">Wiadomość</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <button type="submit">Wyślij</button>
+        </form>
     </div>
-
+    
+    
     <!-- Stopka -->
     <footer class="footer">
         <div class="container">
@@ -280,6 +304,22 @@
                 navbar.classList.remove("sticky");
             }
         }
+    </script>
+    <script>
+        Fancybox.bind("[data-fancybox='gallery']", {
+            Thumbs: false,    // Wyłączenie miniaturek
+            Toolbar: {
+                display: ["zoom", "close"],  // Pokazanie narzędzi (np. zoom, zamknięcie)
+            },
+            closeButton: "inside", // Przyciski zamknięcia w środku
+            infinite: true, // Możliwość nieskończonego przewijania obrazów
+            animationEffect: "zoom-in-out", // Efekt animacji
+            clickContent: "close", // Kliknięcie w tło zamyka obrazek
+            dragToClose: true,  // Zamykanie przez przeciągnięcie w górę/dół
+            Image: {
+                zoom: true, // Możliwość zoomowania
+            },
+        });
     </script>
     
 </body>
