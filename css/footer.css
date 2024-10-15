@@ -1,0 +1,9 @@
+.footer {
+    background-color: #6e6e6e;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+.sidenav-overlay {
+    z-index: 998;
+}

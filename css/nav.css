@@ -1,0 +1,95 @@
+nav {
+    background-color: #ffffff;
+    padding: 0;
+    position: sticky;
+    top: 0; /* Ustawienie nawigacji na górze ekranu */
+    z-index: 1000; /* Ustawienie wysokiego z-index, aby nawigacja była zawsze na wierzchu */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcjonalnie: dodanie cienia pod nawigacją */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.brand-logo {
+    font-weight: 600;
+    color: #333333 !important;
+    margin-left: 0;
+    position: relative; /* Aby kreska była zależna od pozycji logo */
+}
+
+.brand-logo::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    bottom: 10px; /* Kreska pod tekstem */
+    left: 0;
+    transition: background-color 0.3s ease; /* Płynna zmiana koloru kreski */
+}
+
+/* Linki w nawigacji */
+.nav-wrapper ul {
+    margin: 0;
+    padding-right: 20px;
+}
+
+.nav-wrapper ul.right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.nav-wrapper ul li {
+    margin-left: 30px;
+}
+
+.nav-wrapper ul li a {
+    position: relative;
+    color: #333333 !important;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+}
+
+.nav-wrapper ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    margin-bottom: 1rem;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+}
+
+/* Nowa klasa sticky - zmiana kolorów */
+nav.sticky {
+    background-color: #333333; /* Ciemniejsze tło po przyklejeniu */
+}
+
+nav.sticky .brand-logo {
+    color: #ffffff !important; /* Zmiana koloru logo na biały */
+}
+
+nav.sticky .brand-logo::after {
+    background-color: white; /* Zmiana koloru kreski na biały po przyklejeniu */
+}
+
+nav.sticky .nav-wrapper ul li a {
+    color: #ffffff !important; /* Zmiana koloru linków na biały */
+}
+
+nav.sticky .nav-wrapper ul li a::after {
+    background-color: white; /* Zmiana koloru linii pod linkami na biały */
+}

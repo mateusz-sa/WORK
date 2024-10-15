@@ -1,0 +1,49 @@
+.header-section {
+    height: 50vh;
+    background: url('../img/bg.png') no-repeat  center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-container {
+    position: absolute;
+    width: 100%;
+    height: 50%; /* Pokrywa połowę sekcji */
+    top: 0;
+    left: 0;
+    background-color: #6e6e6e; /* Kolor z przezroczystością */
+    z-index: 1;
+}
+
+.welcome-box {
+    position: relative; /* Dodaj pozycjonowanie, aby z-index działał */
+    background-color: rgba(255, 255, 255, 0.911); /* Półprzezroczyste białe tło */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2; /* Wyższy z-index, aby prostokąt był na wierzchu */
+    
+}
+
+
+.welcome-box h2 {
+    color: #2A3D45;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 1rem;
+    align-self: center center;
+}
+
+.divider {
+    margin: 20px 0; /* Marginesy nad i pod linią */
+    height: 2px;
+    background-color: black; /* Czarna linia */
+}
+
+.welcome-box p {
+    color: #333333;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
