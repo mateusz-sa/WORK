@@ -18,23 +18,7 @@
     z-index: 1;
 }
 
-.welcome-box {
-    position: relative; /* Dodaj pozycjonowanie, aby z-index działał */
-    background-color: rgba(255, 255, 255, 0.911); /* Półprzezroczyste białe tło */
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 2; /* Wyższy z-index, aby prostokąt był na wierzchu */
-    
-}
 
-
-.welcome-box h2 {
-    color: #2A3D45;
-    font-weight: bold;
-    margin-bottom: 10px;
-    padding: 1rem;
-    align-self: center center;
-}
 
 .divider {
     margin: 20px 0; /* Marginesy nad i pod linią */
@@ -42,15 +26,10 @@
     background-color: black; /* Czarna linia */
 }
 
-.welcome-box p {
-    color: #333333;
-    font-size: 1.3rem;
-    padding: 1rem;
-}
 
 .header-banner {
     position: relative;
-    background-color: #ffffffc9; /* Główne tło */
+    background-color: #ffffffd3; /* Główne tło */
     padding: 2rem 0;
     text-align: center;
     border-radius: .1rem;
@@ -59,7 +38,7 @@
 }
 
 .header-banner h3 {
-    color: #2A3D45;
+    color: #6e6e6e;
     font-weight: bold;
     font-size: 1.8rem;
     margin: 0;
@@ -71,24 +50,49 @@
 
 /* Divider */
 .header-banner-divider {
-
+    margin-top: 10px;
+    width: 50rem;
+    height: 1px;
+    background-color: #6e6e6e; /* Biała linia pod napisem */
     margin-left: auto;
     margin-right: auto;
     position: relative;
     z-index: 2; /* Divider nad obrazkiem */
 }
-
-/* Obrazek pod sekcją */
-.header-banner::after {
+/* Pseudoelementy dodające narożne linie */
+.header-banner::before, .header-banner::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/divider-bg.jpg'); /* Ścieżka do obrazka */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15; /* Możesz dostosować przezroczystość */
-    z-index: 0; /* Obrazek pod tekstem i dividerem */
+    border: 2px solid rgba(255, 255, 255, 0.534); /* Kolor i grubość linii */
+    width: 10rem; /* Długość poziomej linii */
+    height: 4rem; /* Długość pionowej linii */
+}
+.header-banner::before {
+    top: -10px;
+    left: -10px;
+    border-right: none;
+    border-bottom: none;
+}
+/* Obrazek pod sekcją */
+.header-banner::after {
+    bottom: -10px;
+    right: -10px;
+    border-left: none;
+    border-top: none;
+    content: '';
+    position: absolute;
+
+}
+.header-icon {
+    font-size: 24px; /* Rozmiar ikony */
+    color: #6e6e6e; /* Kolor ikony */
+}
+.header-line-hr {
+    width: 6rem; /* Długość linii */
+    height: 1px;  /* Grubość linii */
+    background-color: #6e6e6e; /* Kolor linii */
+    border: none;
+    margin: 0 0;
+    display: inline-block;
+    vertical-align: middle;
 }

@@ -1,10 +1,13 @@
 .contact-section {
     margin: 3rem auto;
     padding: 2rem;
-    max-width: 800px;
-    border: 2px dashed #333; /* Przerywana ramka */
-    background-color: #fff;
+    border: .1rem dashed #6e6e6e; /* Przerywana ramka */
+    background-color: #fcfcfc;
     position: relative;
+}
+.contact-section-row{
+    background-color: white;
+    border: 1px dashed #6e6e6e;
 }
 
 .contact-section h3 {
@@ -32,43 +35,65 @@
     gap: 0.5rem;
 }
 
+.input-field textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: .2rem;
+    font-size: 1rem;
+    min-height: 150px; /* Minimalna wysokość */
+    box-sizing: border-box; /* Zapewnienie, że padding nie będzie zwiększał rozmiaru pola */
+}
+
 .input-field label {
     font-weight: bold;
     color: #464747; /* Ciemny kolor etykiet */
     font-size: 1rem;
     padding: .3rem;
+    transform: translateY(-0.8rem); /* Przesunięcie etykiety wyżej */
+    background-color: white; /* Dodanie białego tła, aby etykieta była widoczna */
+    padding-left: 0.2rem; /* Drobny odstęp dla lepszej czytelności */
+    padding-right: 0.2rem;
+    position: absolute; /* Ustawienie pozycji etykiety nad polem */
+    top: -10px; /* Przesunięcie w górę */
+    left: 1rem; /* Pozycja etykiety zgodna z paddingiem */
 }
+
 
 .input-field input,
 .input-field textarea {
     width: 100%;
     padding: 1rem;
-    border: 1px dashed #3333336e;
+    border: 1px dashed #6e6e6e;
     border-radius: .2rem;
     font-size: 1rem;
 }
 
-.contact-form button {
-    background-color: #00796b;
-    color: white;
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: .5rem; /* Zaokrąglenie przycisku */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Cień pod przyciskiem */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    text-align: center;
-    display: block;
-    margin: 1.5rem auto 0 auto; /* Środek dla przycisku */
+.map-container{
+        color: #6e6e6e;
+        margin-top: 1rem;
+        
+
+}
+.contact-details{
+    padding: 1rem;
+    
+}
+.contact-details h3{
+    color: #6e6e6e;
 }
 
-.contact-form button:hover {
-    background-color: #004d40;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Cień po najechaniu */
-}
+/* Dodaj odstępy dla mniejszych ekranów */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* Ustawienie elementów jeden pod drugim */
+        align-items: center; /* Wyśrodkowanie elementów */
+    }
 
-.contact-form textarea {
-    height: 150px;
-    resize: none;
+    .contact-form, .contact-map {
+        width: 100%; /* Ustawienie pełnej szerokości dla formularza i mapy */
+    }
+
+    .map-container {
+        margin-top: 1.5rem; /* Odstęp między formularzem a mapą */
+    }
 }

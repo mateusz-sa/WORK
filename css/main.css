@@ -18,29 +18,67 @@ body {
     background-color: #ffffff;
     color: #333;
 }
-.btn {
-    background-color: #6e6e6e;
-    color: white;
-    font-size: 1.2rem; /* Większy tekst */
-    border-radius: 8px; /* Zaokrąglenie przycisku */
-    border: none;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    text-align: center;
-    min-width: 150px; /* Minimalna szerokość */
+/* Stylizacja przycisku "Wyślij" */
+/* Stylizacja przycisku "Wyślij" */
+.btn-submit {
+    background-color: #555555; /* Szary kolor tła przycisku */
+    font-family: 'Raleway', sans-serif;
+
+    color: white; /* Kolor tekstu */
+    font-size: 1.2rem; /* Wielkość tekstu */
+    padding: 0.8rem 2.5rem; /* Odstęp w środku przycisku */
+    border: none; /* Brak ramki */
+    border-radius: 5px; /* Zaokrąglone rogi */
+    text-transform: uppercase; /* Wielkie litery */
+    letter-spacing: 1px; /* Odstępy między literami */
+    position: relative; /* Potrzebne do linii pod napisem */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Płynna animacja */
+    width: 180px; /* Szerokość przycisku */
+    margin: 20px auto; /* Wyśrodkowanie przycisku */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.btn:hover {
-    background-color: #004d40; /* Kolor przy najechaniu */
-    cursor: pointer;
+/* Dodanie ikony do przycisku */
+.btn-submit i {
+    margin-right: 10px; /* Odstęp między ikoną a tekstem */
 }
 
-.btn-block {
-    width: 100%; /* Ustawienie szerokości na 100% kontenera */
-    max-width: 300px; /* Ograniczenie szerokości przycisku */
-    margin: 1.5rem auto; /* Wyśrodkowanie przycisku */
-    display: block;
+/* Dodanie linii pod tekstem */
+.btn-submit::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white; /* Biała linia pod tekstem */
+    bottom: -5px; /* Ustawienie linii pod przyciskiem */
+    left: 0;
+    opacity: 0; /* Ukrycie linii domyślnie */
+    transition: opacity 0.3s ease;
 }
+
+/* Efekty hover - zmiana koloru i podniesienie przycisku */
+.btn-submit:hover {
+    background-color: #333333; /* Ciemniejszy szary na hover */
+    transform: translateY(-3px); /* Delikatne podniesienie przycisku */
+}
+
+/* Uwidocznienie linii po najechaniu */
+.btn-submit:hover::after {
+    opacity: 1; /* Pokazanie linii */
+}
+
+/* Aktywny stan przycisku */
+.btn-submit:active {
+    background-color: #444444; /* Jeszcze ciemniejszy kolor po kliknięciu */
+    transform: translateY(0); /* Przywrócenie oryginalnego położenia */
+}
+
+
+
 
 
 /* Stylizacja sekcji banera */
@@ -81,13 +119,16 @@ body {
 /* Divider pod tytułem */
 .section-banner-divider {
     margin-top: 10px;
-    width: 22rem;
-    height: 2px;
+    width: 50rem;
+    height: 1px ;
     background-color: white; /* Biała linia pod napisem */
     margin-left: auto;
     margin-right: auto;
     position: relative;
     z-index: 2; /* Divider nad obrazkiem */
+
+    
+    
 }
 
 /* Obrazek pod sekcją */
@@ -104,5 +145,13 @@ body {
     opacity: 0.15; /* Możesz dostosować przezroczystość */
     z-index: 0; /* Obrazek pod tekstem i dividerem */
 }
-
+.section-line-hr {
+    width: 6rem; /* Długość linii */
+    height: 1px;  /* Grubość linii */
+    background-color: #ffffff; /* Kolor linii */
+    border: none;
+    margin: 0 0;
+    display: inline-block;
+    vertical-align: middle;
+}
 

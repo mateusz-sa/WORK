@@ -7,14 +7,27 @@
     <title>One Page - Nazwa Firmy</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.0/dist/fancybox.css">
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.0/dist/fancybox.umd.js"></script></head>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.0/dist/fancybox.umd.js"></script>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Materialize Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Materialize JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <body>
-
-    <!-- Nawigacja -->
-    <nav class="z-depth-0">
+      <!-- Nawigacja -->
+      <nav class="z-depth-0">
         <div class="nav-wrapper">
             <a href="#" class="brand-logo">WOODCRAFT</a>
+            <!-- Dodaj ikonę do wyzwalacza menu mobilnego -->
+            <a href="#" data-target="mobile-menu" class="sidenav-trigger mobile-menu">
+                <i class="material-icons">menu</i>
+            </a>
+            <!-- Nawigacja desktopowa -->
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#services">Usługi</a></li>
                 <li><a href="#products">Produkty</a></li>
@@ -25,18 +38,43 @@
     </nav>
 
     <!-- Mobilne menu boczne -->
-    <ul class="sidenav" id="mobile-demo">
+    <ul class="sidenav" id="mobile-menu">
         <li><a href="#services">Usługi</a></li>
         <li><a href="#products">Produkty</a></li>
         <li><a href="#pricing">Cennik</a></li>
         <li><a href="#contact">Kontakt</a></li>
     </ul>
-    
+
+    <!-- Materiały JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Inicjalizacja Sidenav -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.sidenav');
+          var instances = M.Sidenav.init(elems, {
+            edge: 'left', // Menu pojawia się z lewej strony
+            draggable: false, // Menu można przeciągać
+            closeOnClick: true, // Zamykanie menu po kliknięciu na element
+            onOpenStart: function() {
+              console.log("Menu zostało otwarte");
+            },
+            onCloseStart: function() {
+              console.log("Menu zostało zamknięte");
+            }
+          });
+        });
+      </script>
+      
     <!-- Sekcja tytułowa -->
     <header class="header-section">
         <div class="container">
             <div class="header-banner">
-                <h3>PROFESJONALNE USŁUGI STOLARSKIE</h3>
+                <div class="icon-title">
+                    <hr class="header-line-hr"> <!-- Pozioma linia -->
+                    <h3>PROFESJONALNE USŁUGI STOLARSKIE</h3>
+                    <hr class="header-line-hr"> <!-- Pozioma linia -->
+                </div>
                 <div class="header-banner-divider"></div>
             </div>
         </div>
@@ -44,8 +82,10 @@
 
     <div class="section-banner">
         <div class="icon-title">
+            <hr class="section-line-hr"> <!-- Pozioma linia -->
             <i class="fas fa-tools section-icon"></i>
             <h3>ŚWIADCZONE USŁUGI</h3>
+            <hr class="section-line-hr"> <!-- Pozioma linia -->
         </div>
         <div class="section-banner-divider"></div>
     </div>
@@ -59,10 +99,12 @@
             <div class="col s12 m6 service-content">
                 <h3>Tworzenie stołów, biurek oraz schodów</h3>
                 <div class="divider"></div>
-                <p>To właśnie dla nas najważniejsze wyznaczniki działania. Nasze zlecenia wykonujemy sumiennie i starannie. Ze szczególną troską i dbałością dobieramy odpowiednie rodzaje drewna do danego projektu.</p>
+                <p>To właśnie dla nas najważniejsze wyznaczniki działania. Nasze zlecenia wykonujemy sumiennie i
+                    starannie. Ze szczególną troską i dbałością dobieramy odpowiednie rodzaje drewna do danego projektu.
+                </p>
             </div>
         </div>
-    
+
         <div class="row service-item">
             <div class="col s12 m6 push-m6 service-image">
                 <img src="img/image2.jpg" alt="Opis usługi 2" class="responsive-img">
@@ -70,125 +112,130 @@
             <div class="col s12 m6 pull-m6 service-content">
                 <h3>Przecieranie tarcicy na wymiar</h3>
                 <div class="divider"></div>
-                <p>To właśnie dla nas najważniejsze wyznaczniki działania. Nasze zlecenia wykonujemy sumiennie i starannie. Ze szczególną troską dobieramy odpowiednie rodzaje drewna do danego projektu.</p>
+                <p>To właśnie dla nas najważniejsze wyznaczniki działania. Nasze zlecenia wykonujemy sumiennie i
+                    starannie. Ze szczególną troską dobieramy odpowiednie rodzaje drewna do danego projektu.</p>
             </div>
         </div>
-        
+
     </section>
-    
-    <div class="section-banner">
+
+    <div id="products" class="section-banner">
         <div class="icon-title">
+            <hr class="section-line-hr"> <!-- Pozioma linia -->
             <i class="fas fa-box-open section-icon"></i>
             <h3>NASZE PRODUKTY</h3>
+            <hr class="section-line-hr"> <!-- Pozioma linia -->
         </div>
         <div class="section-banner-divider"></div>
     </div>
     <!-- Sekcja z produktami -->
-   <!-- Sekcja z produktami -->
-<!-- Sekcja z produktami -->
-<div id="products" class="products-section section">
-    <div class="container">
-        <div class="row">
-            <!-- Pierwszy wiersz produktów -->
-            <div class="col s12 m4">
-                <div class="card product-card">
-                    <div class="card-image">
-                        <a data-fancybox="gallery" href="img/image1.jpg" data-caption="Produkt 1">
-                            <img src="img/image1.jpg" alt="Produkt 1">
-                        </a>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">Produkt 1</span>
-                        <p>Opis produktu 1...</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col s12 m4">
-                <div class="card product-card">
-                    <div class="card-image">
-                        <a data-fancybox="gallery" href="img/image2.jpg" data-caption="Produkt 2">
-                            <img src="img/image2.jpg" alt="Produkt 2">
-                        </a>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">Produkt 2</span>
-                        <p>Opis produktu 2...</p>
+    <!-- Sekcja z produktami -->
+    <!-- Sekcja z produktami -->
+    <div class="products-section section">
+        <div class="container">
+            <div class="row">
+                <!-- Pierwszy wiersz produktów -->
+                <div class="col s12 m4">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <a data-fancybox="gallery" href="img/image1.jpg" data-caption="Produkt 1">
+                                <img src="img/image1.jpg" alt="Produkt 1">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Produkt 1</span>
+                            <p>Opis produktu 1...</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col s12 m4">
-                <div class="card product-card">
-                    <div class="card-image">
-                        <a data-fancybox="gallery" href="img/image1.jpg" data-caption="Produkt 3">
-                            <img src="img/image1.jpg" alt="Produkt 3">
-                        </a>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">Produkt 3</span>
-                        <p>Opis produktu 3...</p>
+                <div class="col s12 m4">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <a data-fancybox="gallery" href="img/image2.jpg" data-caption="Produkt 2">
+                                <img src="img/image2.jpg" alt="Produkt 2">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Produkt 2</span>
+                            <p>Opis produktu 2...</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Drugi wiersz produktów -->
-            <div class="col s12 m4">
-                <div class="card product-card">
-                    <div class="card-image">
-                        <a data-fancybox="gallery" href="img/image2.jpg" data-caption="Produkt 4">
-                            <img src="img/image2.jpg" alt="Produkt 4">
-                        </a>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">Produkt 4</span>
-                        <p>Opis produktu 4...</p>
+                <div class="col s12 m4">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <a data-fancybox="gallery" href="img/image1.jpg" data-caption="Produkt 3">
+                                <img src="img/image1.jpg" alt="Produkt 3">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Produkt 3</span>
+                            <p>Opis produktu 3...</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col s12 m4">
-                <div class="card product-card">
-                    <div class="card-image">
-                        <a data-fancybox="gallery" href="img/image1.jpg" data-caption="Produkt 5">
-                            <img src="img/image1.jpg" alt="Produkt 5">
-                        </a>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">Produkt 5</span>
-                        <p>Opis produktu 5...</p>
+                <!-- Drugi wiersz produktów -->
+                <div class="col s12 m4">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <a data-fancybox="gallery" href="img/image2.jpg" data-caption="Produkt 4">
+                                <img src="img/image2.jpg" alt="Produkt 4">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Produkt 4</span>
+                            <p>Opis produktu 4...</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col s12 m4">
-                <div class="card product-card">
-                    <div class="card-image">
-                        <a data-fancybox="gallery" href="img/image2.jpg" data-caption="Produkt 6">
-                            <img src="img/image2.jpg" alt="Produkt 6">
-                        </a>
+                <div class="col s12 m4">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <a data-fancybox="gallery" href="img/image1.jpg" data-caption="Produkt 5">
+                                <img src="img/image1.jpg" alt="Produkt 5">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Produkt 5</span>
+                            <p>Opis produktu 5...</p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <span class="card-title">Produkt 6</span>
-                        <p>Opis produktu 6...</p>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <a data-fancybox="gallery" href="img/image2.jpg" data-caption="Produkt 6">
+                                <img src="img/image2.jpg" alt="Produkt 6">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Produkt 6</span>
+                            <p>Opis produktu 6...</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
-    
-    <div class="section-banner">
+
+    <div id="pricing" class="section-banner">
         <div class="icon-title">
+            <hr class="section-line-hr"> <!-- Pozioma linia -->
             <i class="fas fa-tags section-icon"></i>
             <h3>CENNIK</h3>
+            <hr class="section-line-hr"> <!-- Pozioma linia -->
         </div>
         <div class="section-banner-divider"></div>
     </div>
     <!-- Sekcja z cennikiem -->
-    <div id="pricing" class="pricing-section section">
+    <div  class="pricing-section section">
         <div class="container">
             <table class="highlight centered">
                 <thead>
@@ -242,61 +289,83 @@
                         <td>Usługa 2</td>
                         <td>200 PLN</td>
                     </tr>
-                   
+
                 </tbody>
             </table>
         </div>
     </div>
     <div class="section-banner">
         <div class="icon-title">
+            <hr class="section-line-hr"> <!-- Pozioma linia -->
             <i class="fas fa-envelope section-icon"></i>
             <h3>KONTAKT</h3>
+            <hr class="section-line-hr"> <!-- Pozioma linia -->
         </div>
         <div class="section-banner-divider"></div>
     </div>
     <!-- Sekcja z formularzem kontaktowym -->
-    <div class="contact-section">
-        <form class="contact-form">
-            <div class="input-field">
-                <label for="name">Imię</label>
-                <input type="text" id="name" name="name">
+    <div class="contact-section container">
+        <div class="row contact-section-row">
+            <!-- Kolumna z formularzem -->
+            <div class="col s12 m6 map-container">
+                <form class="contact-form">
+                    <div class="input-field">
+                        <label for="name">Imię</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="input-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="input-field">
+                        <label for="message">Wiadomość</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    <button class="btn-submit" type="submit">
+                        <i class="fas fa-paper-plane"></i> Wyślij
+                    </button>
+                </form>
             </div>
-            <div class="input-field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
+
+            <!-- Kolumna z mapą -->
+            <div class="col s12 m6">
+                <div class="map-container">
+                    <div class="contact-details">
+                        <h3>Dane kontaktowe</h3>
+                        <div class="divider"></div>
+                        <p><b>Adres:</b> Grojec 22, 42-283 Boronów</p>
+                        <p><b>Telefon:</b> +48 575 841 662</p>
+                        <p><b>Adres e-mail:</b> mateusz.tarcica@gmail.com</p>
+                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12608.326909921525!2d-0.12775895334985858!3d51.507350379886204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761bdf892c8d6b%3A0x9d2dadddf4a19a9f!2sTrafalgar%20Square%2C%20London%2C%20UK!5e0!3m2!1sen!2suk!4v1667148818076!5m2!1sen!2suk"
+                        width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                </div>
             </div>
-            <div class="input-field">
-                <label for="message">Wiadomość</label>
-                <textarea id="message" name="message"></textarea>
-            </div>
-            <button type="submit">Wyślij</button>
-        </form>
+        </div>
     </div>
-    
-    
+
+
+
     <!-- Stopka -->
     <footer class="footer">
         <div class="container">
-            
+
             <p>&copy; 2024 Nazwa Firmy. Wszelkie prawa zastrzeżone.</p>
         </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems);
-        });
-    </script>
-    <script>
-        window.onscroll = function() {
+        window.onscroll = function () {
             stickyNav();
         };
-    
+
         var navbar = document.querySelector("nav");
         var sticky = navbar.offsetTop;
-    
+
         function stickyNav() {
             if (window.pageYOffset > sticky) {
                 navbar.classList.add("sticky");
@@ -321,7 +390,7 @@
             },
         });
     </script>
-    
+
 </body>
 
 </html>
