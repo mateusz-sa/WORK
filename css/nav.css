@@ -75,6 +75,9 @@ nav {
 .mobile-menu{
     color: #6e6e6e;
 }
+.sidenav{
+    color: #6e6e6e;
+}
 /* Nowa klasa sticky - zmiana kolorów */
 nav.sticky {
     background-color: #6e6e6e; /* Ciemniejsze tło po przyklejeniu */

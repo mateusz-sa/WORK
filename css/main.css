@@ -10,6 +10,9 @@
 @import url('footer.css');
 @import url('typography.css');
 
+@import url('pages/products.css');
+
+
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
@@ -17,6 +20,9 @@ body {
     box-sizing: border-box;
     background-color: #ffffff;
     color: #333;
+}
+p{
+    text-align: justify;
 }
 /* Stylizacja przycisku "Wyślij" */
 /* Stylizacja przycisku "Wyślij" */

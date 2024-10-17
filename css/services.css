@@ -18,6 +18,8 @@
 }
 
 .service-image img {
+    border: .1rem dashed #6e6e6e; /* Przerywany border */
+    padding: .1rem;
     width: 100%;
     height: auto;
 }

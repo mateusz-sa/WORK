@@ -1,0 +1,59 @@
+.product-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Dopasowuje obrazek bez zniekształceń */
+    aspect-ratio: 1 / 1; /* Sprawia, że obrazek jest kwadratem */
+}
+
+.product-card-image {
+    width: 100%;
+    height: 250px; /* Ustaw stałą wysokość dla kart - 250px lub dostosuj do potrzeb */
+    position: relative;
+}
+
+.product-product-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border: 1px dashed #333;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product-product-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out; /* Płynna animacja powiększenia */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie przycisków paginacji */
+    margin-top: 2rem;
+}
+
+.pagination button {
+    color: #6e6e6e;
+    border: 1px dashed #6e6e6e;
+    background-color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.pagination button.active {
+    background-color: #6e6e6e;
+    color: white;
+}
+
+.pagination button:hover {
+    background-color: #6e6e6e;
+    color: white;
+}
+
